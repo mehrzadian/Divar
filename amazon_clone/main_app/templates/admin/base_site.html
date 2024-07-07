@@ -1,0 +1,7 @@
+<!-- templates/admin/base_site.html -->
+
+{% extends "admin/base.html" %}
+{% block title %}My Amazon Clone Admin{% endblock %}
+{% block branding %}
+<h1 id="site-name"><a href="{% url 'admin:index' %}">My Amazon Clone</a></h1>
+{% endblock %}

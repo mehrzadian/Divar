@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <div class="jumbotron">
+        <h1 class="display-4">Welcome to My Amazon Clone</h1>
+        <p class="lead">A simple Amazon-like site built with Django.</p>
+        <hr class="my-4">
+        <p>
+            {% if user.is_authenticated %}
+                Hello, {{ user.username }}! 
+                <a class="btn btn-primary btn-lg" href="{% url 'sign_out' %}" role="button">Sign Out</a>
+                <a class="btn btn-secondary btn-lg" href="{% url 'my_profile' %}" role="button">My Profile</a>
+            {% else %}
+                <a class="btn btn-primary btn-lg" href="{% url 'sign_in' %}" role="button">Sign In</a>
+                <a class="btn btn-secondary btn-lg" href="{% url 'sign_up' %}" role="button">Sign Up</a>
+            {% endif %}
+        </p>
+    </div>
+{% endblock %}

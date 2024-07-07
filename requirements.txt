@@ -1,0 +1,4 @@
+Django>=3.2,<4.0
+djangorestframework>=3.12
+django-otp>=1.0
+twilio>=6.0
